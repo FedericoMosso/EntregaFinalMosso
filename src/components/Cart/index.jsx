@@ -21,15 +21,15 @@ const Cart = () => {
   const handleClick = () => {
     const db = getFirestore ();
     const ordersCollection = collection(db, 'orders');
-    addDoc (ordersCollection, order)
-      .then (({ id }) => console.log(id))
+    addDoc(ordersCollection, order)
+      .then(({ id }) => console.log(id))
   }
 
   if (cart.length === 0) {
   return (
     <>
         <p>No hay elementos en el carrito</p>
-        <Link to= '/'>Hacer compras</Link>
+        <Link to='/'>Hacer compras</Link>
     </>
   );
 }
